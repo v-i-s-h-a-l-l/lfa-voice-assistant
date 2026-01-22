@@ -35,17 +35,15 @@ Ensure you have Python 3.12+ and FFmpeg installed on your system.
 Bash
 # Navigate to project root
 cd logicvoice-ai
+# Navigate to the backend directory
+cd backend
 
-# Set Python Path
-set "PYTHONPATH=%cd%"
-
-# Install core dependencies
+# Install required dependencies
 pip install fastapi uvicorn openai-whisper python-multipart
 
-# Start the server
-uvicorn backend.api.main:app --reload --port 8000
-2. Frontend Setup (Next.js)
-Bash
+# Run the FastAPI server
+uvicorn api.main:app --reload
+
 # Navigate to frontend folder
 cd frontend
 
